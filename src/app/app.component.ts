@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Chart } from 'angular-highcharts';
+import * as DOMPurify from 'dompurify';
 
 @Component({
   selector: 'app-root',
@@ -25,5 +26,7 @@ export class AppComponent {
       }
     ]
   });
+
+  clean = DOMPurify.sanitize('<b>hello there</b>');
 
 }
